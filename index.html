@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Mínimo</title>
+</head>
+<body>
+    <button id="miBoton">Ejecutar Función</button>
+    <div id="respuesta"></div>
+
+    <script>
+        const boton = document.getElementById('miBoton');
+        const respuestaDiv = document.getElementById('respuesta');
+
+        boton.addEventListener('click', async () => {
+            respuestaDiv.textContent = "Procesando...";
+            
+            try {
+                const resultado = await window.electronAPI.ejecutarAccion();
+                respuestaDiv.textContent = resultado;
+                console.log('Respuesta recibida:', resultado);
+            } catch (error) {
+                respuestaDiv.textContent = "Error al ejecutar";
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
