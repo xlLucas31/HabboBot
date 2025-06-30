@@ -1,7 +1,7 @@
 {
   "name": "nodeproyect",
   "scripts": {
-    "start": "electron . -p 9092",
+    "start": "node . -p 9092",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0",
@@ -13,8 +13,10 @@
   "dependencies": {
     "axios": "^1.10.0",
     "cheerio": "^1.1.0",
+    "dotenv": "^17.0.0",
     "electron": "^37.1.0",
     "gnode-api": "^0.2.18",
+    "mongoose": "^8.16.1",
     "openai": "^5.8.2"
   }
 }
